@@ -1,0 +1,11 @@
+SERVER =========================>
+
+1st -> cd Server 
+
+2nd -> npm start 
+
+CLIENT =========================>
+
+1st -> cd client 
+
+2nd -> npm run dev

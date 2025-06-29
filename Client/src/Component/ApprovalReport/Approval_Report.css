@@ -1,0 +1,67 @@
+/* ============  Table css ============= */
+
+body { font-family: Arial, sans-serif; }
+/* Ensure table has a fixed min-width */
+table {
+    min-width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+    margin: auto;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Prevent long text from breaking table layout */
+td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;  /* Adjust as needed */
+    white-space: nowrap;
+}
+th { background-color: #f4f4f4; }
+#emp_id_report{
+    margin: 3vh 3vw;
+}
+
+/* Wrap table in a scrollable div */
+.table-container_report {
+    width: 95vw; 
+    overflow-x: auto;
+    margin: auto;
+}
+
+.fa-pen-to-square,
+.fa-trash{
+    cursor: pointer;
+}
+
+/* =================== Search css ========== */
+.search-container_report {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.search-container_report input {
+    flex: 1;
+    padding: 6px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* ============= Create btn css ============ */
+
+#create_btn {
+    color: white;
+    background-color: gray;
+    font-size: 20px;
+    padding: 6px 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+

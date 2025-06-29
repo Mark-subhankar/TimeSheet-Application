@@ -1,0 +1,36 @@
+CREATE TABLE mst_department (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    department_name VARCHAR(255) NOT NULL,
+    description VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_by VARCHAR(1000),
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    updated_by VARCHAR(1000)
+);
+
+CREATE TABLE mst_roles (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    role VARCHAR(255) NOT NULL,
+    description VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_by VARCHAR(1000),
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    updated_by VARCHAR(1000)
+);
+
+
+CREATE TABLE mst_employee_details (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    salary DECIMAL(10,2), 
+    designation VARCHAR(255),
+    password VARCHAR(255) NOT NULL,
+    department_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_by VARCHAR(1000),
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    updated_by VARCHAR(1000),
+    FOREIGN KEY (department_id) REFERENCES mst_department(id) ON DELETE SET NULL
+    FOREIGN KEY (role_id) REFERENCES mst_roles(id) ON DELETE SET NULL
+);

@@ -1,0 +1,104 @@
+/* ========== modal dilog css ============ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 5rem;
+}
+
+.modal-wrapper-role {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-container {
+    position: fixed;
+    width: 50vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem 3rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+
+
+/* =============================== Form Css ===================================== */
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+#btn_submit {
+    background-color: gray;
+    color: white;
+    padding: 12px 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+
+.col-75 {
+    margin-top: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.field_t {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.col-75 {
+    flex: 1;
+    min-width: 200px;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.emp_from{
+    margin-top: 3vh;
+}
+
+/* ========  Close button css =========== */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: red;
+}

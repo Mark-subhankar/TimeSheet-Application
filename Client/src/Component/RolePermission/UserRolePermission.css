@@ -1,0 +1,46 @@
+/* ============  Table css ============= */
+
+body { font-family: Arial, sans-serif; }
+table { width: 95vw; border-collapse: collapse; margin: auto; }
+th, td { border: 1px solid black; padding: 10px; text-align: center; }
+th { background-color: #f4f4f4; }
+#emp_id{
+    margin: 3vh 3vw;
+}
+
+.fa-pen-to-square,
+.fa-trash{
+    cursor: pointer;
+}
+
+/* =================== Search css ========== */
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 6px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* ============= Create btn css ============ */
+
+#create_btn {
+    color: white;
+    background-color: gray;
+    font-size: 20px;
+    padding: 6px 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+

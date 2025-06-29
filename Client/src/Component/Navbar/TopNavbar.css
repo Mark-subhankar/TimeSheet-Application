@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    top: 0px;
+}
+
+body {
+    min-height: 100vh;
+    background: white;
+}
+
+header {
+    width: 100%;
+    min-height: 66px;
+    background: gray;
+    /* padding: 0 100px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#top_header{
+    background: black;
+}
+header .logo {
+    color: white;
+    font-size: 1.75em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+header ul {
+    position: relative;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+    float: left;
+}
+
+header ul li a {
+    color: white;
+    font-size: 1.1em;
+    padding: 20px 25px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+header ul li a:hover{
+    text-decoration: none;
+    background-color: rgb(41, 40, 40);
+}
+
+
+/* ----------  Interval 1 --------------------*/
+
+header ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: gray;
+    display: none;
+}
+
+header ul li:hover>ul {
+    display: block;
+    top: 100%;
+}
+
+header ul li ul li {
+    position: relative;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* ------------ Interval 2------------------------ */
+header ul li ul li ul {
+    top: 0;
+    left: 200px;
+}
+
+/* -------------  Responsive ------------------ */
+
+@media (max-width: 900px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        top: 66px;
+        left: 0;
+        background: gray;
+        display: none;
+    }
+    header.active nav{
+        display: initial;
+    }
+
+    header nav ul li{
+        width: 100%;
+    }
+
+    header nav ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    header ul li ul li ul {
+            top: 0;
+            left: 0;
+    }
+    header nav ul li:hover ul li{
+        background: rgb(73, 72, 72);
+    }
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 50px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .menuToggle::before,
+    .menuToggle::after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background: white;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    }
+    
+    .menuToggle::before {
+        transform: translateY(-12px);
+        box-shadow: 0 12px white;
+    }
+    
+    .menuToggle::after {
+        transform: translateY(12px);
+    }
+    
+    /* Active State Animations */
+    header.active .menuToggle::before {
+        transform: rotate(45deg) translateY(0);
+        box-shadow: 0 0 white;
+    }
+    
+    header.active .menuToggle::after {
+        transform: rotate(-45deg) translateY(0);
+    }
+    
+}

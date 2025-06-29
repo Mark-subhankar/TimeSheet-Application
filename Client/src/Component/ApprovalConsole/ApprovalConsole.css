@@ -1,0 +1,125 @@
+.approval-container {
+    margin-top: 30px;
+    /* margin: 10vh 3vw 0; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.no_data_found{
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.read-more{
+    color: blue;
+    cursor: pointer;
+}
+
+.card {
+    width: 23%;
+    /* Ensures 4 cards per row (100% / 4 = 25%, adjusted for spacing) */
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover effect */
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Text styling */
+.text_container {
+    padding: 7vh 2vw;
+    background-color: #e7e5e2;
+    text-align: left;
+}
+
+/* Button group layout */
+.btn_group {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+}
+
+/* Button styling */
+.btn_group button {
+    padding: 8px 16px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Icon styling */
+.fa-check {
+    color: green;
+}
+
+.fa-xmark {
+    color: red;
+}
+
+/* Padding for text rows */
+.row-1 {
+    padding: 5px 0px;
+}
+.h1_heading{
+    margin: 17px 2vw;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95vw;
+    margin: auto;
+    margin-bottom: 10px;
+    gap: 10px; /* Ensures spacing between elements */
+}
+
+.search-container input {
+    flex: 3;  /* Makes the search bar take more space */
+    padding: 6px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    min-width: 200px; /* Ensures the search bar doesn't shrink too much */
+}
+
+.search-container select {
+    flex: 1;  /* Makes the department dropdown smaller */
+    padding: 13px;
+    font-size: 16px;
+    border-radius: 5px;
+    min-width: 120px; /* Ensures the dropdown doesn't shrink too much */
+    max-width: 200px; /* Limits its maximum width */
+}
+
+
+/* ====================✅ RESPONSIVE BEHAVIOR =================*/
+
+/* If the screen width is less than 1200px, show 3 cards per row */
+@media (max-width: 1200px) {
+    .card {
+        width: 30%;
+    }
+}
+
+/* If the screen width is less than 992px, show 2 cards per row */
+@media (max-width: 992px) {
+    .card {
+        width: 45%;
+    }
+}
+
+/* If the screen width is less than 600px, show 1 card per row */
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+}

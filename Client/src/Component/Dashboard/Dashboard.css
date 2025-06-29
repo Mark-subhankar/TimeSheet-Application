@@ -1,0 +1,159 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Nat Cards ========================> */
+.container-natcard {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* This aligns heading at top, value at bottom */
+  height: 120px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  background-color: #f9f9f9;
+}
+
+.box-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.box-value {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+/* Table container =============================> */
+.table-data {
+  max-height: 50vh;
+  overflow-y: auto;
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Table styles */
+.table-data table {
+  width: max-content;
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+.table-data th {
+  background-color: #f4f4f4;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.table-data td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap; /* default for all cells */
+}
+
+/* Hover effect */
+.table-data tr:hover {
+  background-color: #f9f9f9;
+}
+
+.cotainer-table {
+    padding: 20px;
+    /* margin-bottom: -31px; */
+    margin-top: -29px;
+}
+
+.cotainer-table h1{
+    padding: 12px;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+/* DashBoard ====================> */
+
+.apex-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  background-color: #f8f9fa;
+  padding: 15px 20px;
+  border: 1px solid #ddd;
+  /* border-radius: 8px; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* margin: 20px; */
+  font-size: 16px;
+  /* color: #bd0f0f; */
+  background-color: #eff3f3;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.breadcrumb-icon {
+  font-size: 18px;
+}
+
+.breadcrumb-text {
+  color: #0074d9;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.breadcrumb-text.active {
+  color: #000;
+  font-weight: bold;
+  cursor: default;
+}
+
+.breadcrumb-separator {
+  color: #888;
+}
+
+
+
+/* Charts =================> */
+.container-chart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 100%;
+}
+
+.chart-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-heading {
+  margin-bottom: 8px;
+  font-size: 25px;
+  font-weight: 900;
+  color: #333;
+}
+
+.box-chart {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  height: 35vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
